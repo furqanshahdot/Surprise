@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Hooria ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Trebuchet MS',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#b3002d,#ff1744,#ff5c8d,#ffd1dc);
+height:100vh;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.card{
+width:90%;
+max-width:700px;
+background:rgba(255,255,255,.96);
+padding:40px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 0 35px rgba(255,0,80,.4);
+z-index:5;
+}
+
+h1{
+font-size:46px;
+color:#d1004b;
+}
+
+h2{
+margin:10px;
+color:#ff1744;
+}
+
+p{
+font-size:20px;
+line-height:1.7;
+color:#555;
+margin-top:15px;
+}
+
+input{
+padding:12px;
+font-size:18px;
+width:220px;
+border-radius:10px;
+border:2px solid #ff1744;
+text-align:center;
+margin-top:15px;
+}
+
+button{
+margin-top:20px;
+padding:14px 30px;
+font-size:20px;
+border:none;
+border-radius:12px;
+background:#ff1744;
+color:white;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+#gift{
+display:none;
+margin-top:25px;
+animation:fade 1s;
+}
+
+@keyframes fade{
+from{opacity:0;transform:scale(.8);}
+to{opacity:1;transform:scale(1);}
+}
+
+.float{
+position:absolute;
+bottom:-80px;
+font-size:35px;
+animation:rise linear infinite;
+}
+
+@keyframes rise{
+from{
+transform:translateY(0);
+opacity:0;
+}
+to{
+transform:translateY(-120vh);
+opacity:1;
+}
+}
+</style>
+</head>
+
+<body>
+
+<audio id="music" loop>
+<source src="birthday.mp3" type="audio/mpeg">
+</audio>
+
+<div class="card">
+
+<h1>🎂 Happy Birthday Hooria ❤️</h1>
+
+<h2>🌹 A Secret Surprise Just For You 🌹</h2>
+
+<p>
+Before you can open your birthday gift,
+enter the secret password.
+</p>
+
+<p><b>💌 Hint:</b> When I messaged you!</p>
+
+<input type="password" id="password" placeholder="Enter Password">
+
+<br>
+
+<button onclick="unlock()">🎁 Unlock Gift</button>
+
+<div id="gift">
+
+<h2>💖 Happy Birthday Hooria! 💖</h2>
+
+<p>
+
+Dear Hooria,
+
+Happy Birthday to the most amazing best friend anyone could ever ask for. ❤️
+
+Thank you for being such a wonderful part of my life.
+Your kindness, laughter, and beautiful heart make every day brighter.
+
+I hope this year brings you endless happiness, success, peace, love, and every dream you've wished for.
+
+Always keep smiling because your smile is truly priceless.
+
+May Allah bless you with good health, lots of happiness, and a future filled with beautiful moments.
+
+Thank you for being YOU.
+
+🎂 Happy Birthday once again! 🎈
+
+❤️ Your Bestie ❤️
+
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+const emojis=["❤️","🎁","🌹","🎈","✨","💕","💝"];
+
+for(let i=0;i<45;i++){
+
+let e=document.createElement("div");
+
+e.className="float";
+
+e.innerHTML=emojis[Math.floor(Math.random()*emojis.length)];
+
+e.style.left=Math.random()*100+"vw";
+
+e.style.animationDuration=(5+Math.random()*6)+"s";
+
+e.style.fontSize=(25+Math.random()*20)+"px";
+
+document.body.appendChild(e);
+
+}
+
+function unlock(){
+
+const pass=document.getElementById("password").value;
+
+if(pass==="2406"){
+
+document.getElementById("gift").style.display="block";
+
+document.getElementById("music").play();
+
+alert("🎉 Correct Password! Happy Birthday Hooria ❤️");
+
+}else{
+
+alert("❌ Wrong Password!\n\nHint: When I messaged you! 💌");
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
