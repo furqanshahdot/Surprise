@@ -1,211 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Hooria ❤️</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Hooria ❤️</title>
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Trebuchet MS',sans-serif;
-}
+    <link rel="stylesheet" href="style.css">
 
-body{
-background:linear-gradient(135deg,#b3002d,#ff1744,#ff5c8d,#ffd1dc);
-height:100vh;
-overflow:hidden;
-display:flex;
-justify-content:center;
-align-items:center;
-}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-.card{
-width:90%;
-max-width:700px;
-background:rgba(255,255,255,.96);
-padding:40px;
-border-radius:25px;
-text-align:center;
-box-shadow:0 0 35px rgba(255,0,80,.4);
-z-index:5;
-}
-
-h1{
-font-size:46px;
-color:#d1004b;
-}
-
-h2{
-margin:10px;
-color:#ff1744;
-}
-
-p{
-font-size:20px;
-line-height:1.7;
-color:#555;
-margin-top:15px;
-}
-
-input{
-padding:12px;
-font-size:18px;
-width:220px;
-border-radius:10px;
-border:2px solid #ff1744;
-text-align:center;
-margin-top:15px;
-}
-
-button{
-margin-top:20px;
-padding:14px 30px;
-font-size:20px;
-border:none;
-border-radius:12px;
-background:#ff1744;
-color:white;
-cursor:pointer;
-transition:.3s;
-}
-
-button:hover{
-transform:scale(1.05);
-}
-
-#gift{
-display:none;
-margin-top:25px;
-animation:fade 1s;
-}
-
-@keyframes fade{
-from{opacity:0;transform:scale(.8);}
-to{opacity:1;transform:scale(1);}
-}
-
-.float{
-position:absolute;
-bottom:-80px;
-font-size:35px;
-animation:rise linear infinite;
-}
-
-@keyframes rise{
-from{
-transform:translateY(0);
-opacity:0;
-}
-to{
-transform:translateY(-120vh);
-opacity:1;
-}
-}
-</style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<audio id="music" loop>
-<source src="birthday.mp3" type="audio/mpeg">
+<!-- Floating Hearts -->
+<div id="hearts"></div>
+
+<!-- Music -->
+<audio id="bgMusic" loop>
+    <source src="birthday.mp3" type="audio/mpeg">
 </audio>
 
-<div class="card">
+<!-- Password Screen -->
+<div id="loginScreen">
 
-<h1>🎂 Happy Birthday Hooria ❤️</h1>
+    <div class="loginBox">
 
-<h2>🌹 A Secret Surprise Just For You 🌹</h2>
+        <h1>🎀 Secret Birthday Surprise 🎀</h1>
 
-<p>
-Before you can open your birthday gift,
-enter the secret password.
-</p>
+        <h2>For Hooria ❤️</h2>
 
-<p><b>💌 Hint:</b> When I messaged you!</p>
+        <p class="hint">
+            🔒 Enter the Secret Password
+        </p>
 
-<input type="password" id="password" placeholder="Enter Password">
+        <input
+            type="password"
+            id="password"
+            placeholder="Password">
 
-<br>
+        <p class="smallHint">
+            💌 Hint: When I messaged you!
+        </p>
 
-<button onclick="unlock()">🎁 Unlock Gift</button>
+        <button onclick="checkPassword()">
+            Unlock Surprise 🎁
+        </button>
 
-<div id="gift">
+    </div>
 
-<h2>💖 Happy Birthday Hooria! 💖</h2>
+</div>
 
-<p>
+<!-- Main Website -->
+
+<div id="mainWebsite">
+
+    <!-- Header -->
+
+    <section class="hero">
+
+        <h1 class="title">
+            🎂 Happy Birthday Hooria ❤️
+        </h1>
+
+        <p class="subtitle">
+            My Sweetest Best Friend 🌸
+        </p>
+
+    </section>
+
+    <!-- Gift -->
+
+    <section class="giftSection">
+
+        <h2>
+            I have a surprise for you...
+        </h2>
+
+        <div id="giftBox" onclick="openGift()">
+
+            🎁
+
+        </div>
+
+        <p>
+            Click the gift...
+        </p>
+
+    </section>
+
+    <!-- Hidden Surprise -->
+
+    <section id="surprise">
+
+        <div class="cake">
+
+            🎂
+
+        </div>
+
+        <h2>
+            Happy Birthday Hooria 💖
+        </h2>
+
+        <div class="letter">
+
+            <h3>💌 A Letter For You 💌</h3>
+
+            <p>
 
 Dear Hooria,
 
-Happy Birthday to the most amazing best friend anyone could ever ask for. ❤️
+Happy Birthday to the most wonderful best friend anyone could ever ask for.
 
-Thank you for being such a wonderful part of my life.
-Your kindness, laughter, and beautiful heart make every day brighter.
+Thank you for always being there, making me laugh, and filling every moment with happiness.
 
-I hope this year brings you endless happiness, success, peace, love, and every dream you've wished for.
+You deserve endless smiles, beautiful memories, success, love, peace and every dream your heart wishes for.
 
-Always keep smiling because your smile is truly priceless.
+May Allah bless you with good health, happiness and a future full of amazing adventures.
 
-May Allah bless you with good health, lots of happiness, and a future filled with beautiful moments.
+Never stop smiling because your smile makes the world brighter.
 
 Thank you for being YOU.
 
-🎂 Happy Birthday once again! 🎈
+Happy Birthday once again. ❤️
 
-❤️ Your Bestie ❤️
+— Your Bestie 🌹
 
-</p>
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        Made with ❤️ especially for Hooria
+
+    </footer>
 
 </div>
 
-</div>
+<!-- Confetti -->
 
-<script>
+<canvas id="confetti"></canvas>
 
-const emojis=["❤️","🎁","🌹","🎈","✨","💕","💝"];
-
-for(let i=0;i<45;i++){
-
-let e=document.createElement("div");
-
-e.className="float";
-
-e.innerHTML=emojis[Math.floor(Math.random()*emojis.length)];
-
-e.style.left=Math.random()*100+"vw";
-
-e.style.animationDuration=(5+Math.random()*6)+"s";
-
-e.style.fontSize=(25+Math.random()*20)+"px";
-
-document.body.appendChild(e);
-
-}
-
-function unlock(){
-
-const pass=document.getElementById("password").value;
-
-if(pass==="2406"){
-
-document.getElementById("gift").style.display="block";
-
-document.getElementById("music").play();
-
-alert("🎉 Correct Password! Happy Birthday Hooria ❤️");
-
-}else{
-
-alert("❌ Wrong Password!\n\nHint: When I messaged you! 💌");
-
-}
-
-}
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
